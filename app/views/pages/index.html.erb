@@ -1,0 +1,256 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="prism-atom-dark.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+
+    <title>Hyon Lee</title> 
+    <meta name="desciption" content="Click this link"
+  </head>
+
+  <body>
+    <div class = "about-container">
+      <ul>
+        <li><a href="#" class="nav-link">About</li>
+        <li><a href="#code-samples" class="nav-link">Code Samples</li>
+        <li><a href="#web-apps" class="nav-link">Web Apps</li>
+        <li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</li>
+        <li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</li>
+      </ul>
+
+      <div class="about">
+        <img src="me.jpg" class="me" />
+
+        <h1>Hyon Lee</h1>
+
+        <h2>Future Software Engineer</h2>
+
+        <hr class="grey"/>
+        <p class="bio">
+          Hyon Lee manages an airbnb, day trades stocks, and helps out his parents with their business of selling jewelry. As such, he has some free time, and hopefully he can use it in a productive manner for this course
+
+        </p>
+      </div>
+    </div>
+
+    <h3 id="code-samples">Code Snippets</h3>
+    <hr class="style12">
+
+    <div class="box">
+      <h4>Temperature Conversion</h4>
+      <p>
+        This Ruby program will prompt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Fahrenheit
+      </p>  
+    </div>
+    
+    <div class="box">
+  <pre><code class="language-ruby">
+      def C(n)
+      return n * (9.0/5.0) + 32.0
+      end
+
+      puts &quot;Enter the degrees Celsius you would like to convert:&quot;
+      user_input = gets.chomp
+      degrees_celsius = user_input.to_f
+
+      response = &quot;#{degrees_celsius} degrees Celsius is equal to #{C(degrees_celsius)} degrees Fahrenheit&quot;
+      puts response
+  </code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+  <pre><code class="language-ruby">
+      def number_place(input)
+          inputmod = input.to_f % 10
+          
+
+          if input == &quot;11&quot; || input == &quot;12&quot; || input == &quot;13&quot;
+              puts &quot;You are the &quot;+ input +&quot;th customer&quot;
+              
+          elsif inputmod == 1
+              puts &quot;You are the &quot;+ input +&quot;st customer&quot;
+          
+          elsif inputmod == 2
+              puts &quot;You are the &quot;+ input +&quot;nd customer&quot;
+          
+          elsif inputmod == 3
+              puts &quot;You are the &quot;+ input +&quot;rd customer&quot; 
+              
+              
+          else
+              puts &quot;You are the &quot;+ input +&quot;th customer&quot;
+          
+          end
+          
+      end
+
+      puts &quot;Enter a number&quot;
+      raw_input = gets.chomp
+
+      number_place(raw_input)
+  </code></pre>   
+    </div>
+
+    <div class="box">
+      <h4>Ordinal Challenge</h4>
+      <p>
+        This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+      </p>    
+    </div>
+    
+    <br class="clear" />
+    <div class="box">
+      <h4>Foobar</h4>
+      <p>
+        This Ruby program is an adaptation of a classic technical problem which displays sequences of the Foobar pattern.
+      </p>  
+    </div>
+
+    <div class="box">
+  <pre><code class="language-ruby">   
+      def displayed(number)
+
+          index = 1
+
+          while index &lt;= number
+              foo = index % 3
+              bar = index % 5
+
+          if foo != 0 &amp;&amp; bar != 0
+              puts index
+
+          elsif foo == 0
+              puts &quot;foo&quot;
+
+          elsif bar == 0
+              puts &quot;bar&quot;
+
+              end
+
+            index = index + 1
+
+          end
+
+      end
+
+      puts &quot;How many items do you want to see?&quot;
+      user_input = gets.chomp.to_i
+      displayed(user_input)
+  </code></pre>   
+    </div>  
+  
+    <h3 id="web-apps">Web Apps</h3>
+    <hr class="yellow" />
+
+    <div class="box">
+      <h4>Quote Generator</h4>
+      <img src="splurty.png" class="full-width" />
+      <p>
+        A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+      </p>  
+    </div>
+
+<div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    
+    </div>
+    
+    <br class="clear" />
+    
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+  
+  <p class="skills-and-tools">
+    Hyon has developed proficiency and expertise in the following programming languages and comfort with the following tools.
+
+  </p>
+
+  <div class="icons">
+    <img src="github.png" class="icon" />
+    <img src="rubocop.png" class="icon" />
+    <img src="trello.png" class="icon" />
+    <img src="slack.png" class="icon" />
+    <img src="codeship.png" class="icon" />
+
+    <br class="clear" />
+    <img src="skills.png" class="icon" />
+
+  </div>
+
+  <div class="contact-me" id="hire-me">
+    <h3 class="contact-headline">Contact</h3>
+    <hr class="yellow" />
+    <p class="contact-info">
+      Currently entertaining new opportunities.
+      Please get in touch via email:
+    </p>
+    
+    <p>
+      <a href="mailto:hyon.lee@utexas.edu" class="contact-link">
+      hyon.lee@utexas.edu
+      </a>
+    </p>    
+
+  </div>  
+
+  </body>
+
+</html>
